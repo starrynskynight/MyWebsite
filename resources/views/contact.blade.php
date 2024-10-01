@@ -189,25 +189,22 @@ button:hover
             <div class="text-white title">Contact Me!</div>
             <div class="text-white title-info">Gimme some random things you want to share with me :)</div>
 
-            <form action="" method="" class="form">
+            <form action="{{ route('contact') }}" method="post" class="form">
+            @csrf
                 <div class="input-group">
-                    <input type="text" name="first_name" id="first-name" placeholder="First name">
-                    <label for="first-name">First name</label>
-                </div>
-                
-                <div class="input-group">
-                    <input type="text" name="last_name" id="last-name" placeholder="Last Name">
-                    <label for="last-name">Last name</label>
-                </div>
-
-                <div class="input-group">
-                    <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
-                    <label for="e-mail">e-mail</label>
+                    <input type="text" name="title" id="title" value="{{ old('title')}}" placeholder="First name">
+                    <label for="first-name">Name</label>
+                    @error('title')
+                    <p class="text-xs">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="textarea-group">
-                    <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+                    <textarea name="body" id="body" rows="5" placeholder="Message"></textarea>
                     <label for="message">Message</label>
+                    @error('body')
+                    <p class="text-xs">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="button-div">

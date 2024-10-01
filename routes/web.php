@@ -13,10 +13,25 @@ use App\Http\Controllers\ControllerPage;
 |
 */
 
-Route::get('/', [ControllerPage::class, 'home'])->name('home'); 
-Route::get('/about', [ControllerPage::class, 'about'])->name('tentang'); 
-Route::get('/life', [ControllerPage::class, 'life'])->name('life'); 
-Route::get('/contact', [ControllerPage::class, 'contact'])->name('contact'); 
+// Route::get('/', [ControllerPage::class, 'home'])->name('home'); 
+// Route::get('/about', [ControllerPage::class, 'about'])->name('tentang'); 
+// Route::get('/life', [ControllerPage::class, 'life'])->name('life'); 
+// Route::post('/contact', [ControllerPage::class, 'contact'])->name('contact');
+// Route::get('/result', [ControllerPage::class, 'showResult'])->name('result');
+
+Route::get('/', [ControllerPage::class, 'home'])->name('home');
+Route::get('/about', [ControllerPage::class, 'about'])->name('tentang');
+Route::get('/life', [ControllerPage::class, 'life'])->name('life');
+Route::get('/contact', [ControllerPage::class, 'showContactForm'])->name('contact.form');
+Route::post('/contact', [ControllerPage::class, 'contact'])->name('contact');
+Route::get('/result', [ControllerPage::class, 'showResult'])->name('result');
+
+
+
+
+
+
+// Route::post('/formPost', [ControllerPage::class, 'formPost'])->name('formPost');
 
 // Route::get('/about', function () {
 //     return view('about');

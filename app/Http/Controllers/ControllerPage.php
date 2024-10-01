@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\PostRequest;
 
 use Illuminate\Http\Request;
 
@@ -15,7 +16,20 @@ class ControllerPage extends Controller
     public function life () {
         return view('life');
     }
-    public function contact () {
+    public function  showContactForm() {
         return view('contact');
     }
+    public function contact(PostRequest $request)
+    {
+    $data = $request->validated(); // Mengambil data validasi dari PostRequest
+    return redirect()->route('result')->with('data', $data);
+    }
+
+    public function showResult()
+    {
+    $data = session('data'); // Mengambil data dari session jika ada
+    return view('result', compact('data'));
+    }
+
+
 }
