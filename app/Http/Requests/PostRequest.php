@@ -40,7 +40,7 @@ class PostRequest extends FormRequest
     {
         return [
             'title.required' => 'Nama harap diisi.',
-            'title.max:50'   => 'Nama tidak boleh melebihi 50 karakter',
+            'title.max'   => 'Nama tidak boleh melebihi 50 karakter',
             'body.required'  => 'Pesan harap diisi',
         ];
     }

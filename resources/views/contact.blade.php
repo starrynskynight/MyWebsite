@@ -51,7 +51,9 @@ input, textarea
     padding: 1.5%;
     font-size: 20px;
 }
-label 
+input {
+    background-color: #0c2d48;
+}
 
 input:focus, textarea:focus
 {
@@ -190,27 +192,28 @@ button:hover
             <div class="text-white title-info">Gimme some random things you want to share with me :)</div>
 
             <form action="{{ route('contact') }}" method="post" class="form">
-            @csrf
-                <div class="input-group">
-                    <input type="text" name="title" id="title" value="{{ old('title')}}" placeholder="First name">
-                    <label for="first-name">Name</label>
-                    @error('title')
-                    <p class="text-xs">{{$message}}</p>
-                    @enderror
-                </div>
+             @csrf
+            <div class="input-group">
+            <input type="text" name="title" id="title" value="{{ old('title') }}" placeholder="First name">
+            <label for="first-name">Name</label>
+            @error('title')
+            <p class="text-xs">{{ $message }}</p>
+            @enderror
+            </div>
 
-                <div class="textarea-group">
-                    <textarea name="body" id="body" rows="5" placeholder="Message"></textarea>
-                    <label for="message">Message</label>
-                    @error('body')
-                    <p class="text-xs">{{$message}}</p>
-                    @enderror
-                </div>
+            <div class="textarea-group">
+            <textarea name="body" id="body" rows="5" placeholder="Message">{{ old('body') }}</textarea>
+            <label for="message">Message</label>
+            @error('body')
+            <p class="text-xs">{{ $message }}</p>
+            @enderror
+            </div>
 
-                <div class="button-div">
-                    <button class="button-contact" type="submit">Send</button>
-                </div>
+            <div class="button-div">
+                <button class="button-contact" type="submit">Send</button>
+            </div>
             </form>
+
             </div>
         </main>
 @endsection  
