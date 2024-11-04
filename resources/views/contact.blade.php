@@ -187,7 +187,7 @@ button:hover
 
 
 <main class="container_9 w-full ">
-<div class="container_10 w-1/2 max-w-4xl bg-red-500 p-2 rounded-lg shadow-lg flex flex-col items-center my-10">
+<div class="container_10 w-1/2 max-w-4xl bg-red-500 p-2 rounded-lg shadow-lg flex flex-col items-center my-20">
             <div class="text-white title">Contact Me!</div>
             <div class="text-white title-info">Gimme some random things you want to share with me :)</div>
 

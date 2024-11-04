@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerPage;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,10 @@ Route::get('/life', [ControllerPage::class, 'life'])->name('life');
 Route::get('/contact', [ControllerPage::class, 'showContactForm'])->name('contact.form');
 Route::post('/contact', [ControllerPage::class, 'contact'])->name('contact');
 Route::get('/result', [ControllerPage::class, 'showResult'])->name('result');
+Route::resource('/posts', PostController::class);
+Route::resource('posts', PostController::class);
+Route::delete('/post/{id}/delete', [PostController::class, 'destroy'])->name('post.destroyer');
+
 
 
 

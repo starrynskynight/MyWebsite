@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.5.0/dist/flowbite.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>@yield('titlePage')</title>
     <link href="contact.css" rel="stylesheet">
     <script>
@@ -13,11 +16,7 @@
       }
     </script>
     <style>
-        body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    }
+        
     footer {
     width: 100%;
     background-color: #111827;
@@ -153,7 +152,7 @@
     
     <!-- Bagian 1 -->
     
-    <div class="container w-full m-w-none mt-10">
+    <div>
         @yield('content')
     </div>
 

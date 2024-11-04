@@ -19,9 +19,10 @@ class ControllerPage extends Controller
     public function  showContactForm() {
         return view('contact');
     }
+    
     public function contact(PostRequest $request)
     {
-    $data = $request->validated(); // Mengambil data validasi dari PostRequest
+    $data = $request->validated();
     return redirect()->route('result')->with('data', $data);
     }
 

@@ -36,7 +36,7 @@
     }
 </style>
 
-<main class="container mt-9">
+<main class="container py-5 mt-5">
     <div class="result-container">
         <h1 class="result-title">Data yang Terkirim</h1>
         
